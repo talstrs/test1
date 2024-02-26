@@ -1,0 +1,109 @@
+/*----------------------------------------*/
+/*  30.04 - Log In & Register CSS
+/*----------------------------------------*/
+
+// Log In & Registe
+.login-register {
+    background: $white;
+    box-shadow: 0 0 30px rgba(141, 141, 141, 0.149);
+    padding: 50px;
+    position: relative;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 400;
+        color: $heading-color;
+        line-height: 1.2;
+    }
+    &__form {
+    }
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -5px;
+        margin-right: -5px;
+        margin-top: 25px;
+
+        & li {
+            padding: 0 5px;
+
+            & a {
+                display: flex;
+                align-items: center;
+                color: $white;
+                padding: 10px 15px;
+                border-radius: 5px;
+
+                & .social-icon {
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    position: relative;
+                    margin-right: 10px;
+
+                    & img {
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+                & .social-text {
+                    font-size: 18px;
+                    line-height: 1;
+
+                    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                        font-size: 16px;
+                    }
+                }
+
+                &.social-facebook {
+                    background: #2660cc;
+
+                    & .social-icon {
+                        background-color: $white;
+                        border-radius: 50%;
+                        overflow: hidden;
+
+                        & img {
+                            margin-bottom: -6px;
+                            transform: scale(1.4);
+                        }
+                    }
+                }
+                &.social-google {
+                    background: #db422e;
+
+                    & .social-icon {
+                        & img {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .single-form {
+        & .lost-password {
+            align-self: flex-end;
+            text-align: right;
+            margin: 0 0 -1.4em;
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+            width: 48%;
+            float: right;
+            clear: none;
+        }
+
+        & .privacy-policy-text {
+            font-size: 14px;
+        }
+
+        &__btn {
+            width: 180px;
+            padding: 17px 30px;
+            font-size: 18px;
+        }
+    }
+}

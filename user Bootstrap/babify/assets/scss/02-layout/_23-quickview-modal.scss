@@ -1,0 +1,151 @@
+/*----------------------------------------*/
+/*  02.23 - Quick View Modal CSS
+/*----------------------------------------*/
+
+// Quick View Modal
+.quickview-modal {
+    &.fade {
+        display: block !important;
+        opacity: 0;
+        visibility: hidden;
+
+        &.show {
+            display: block !important;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    & .modal-dialog {
+        max-width: 1500px;
+        max-height: 80vh;
+        position: relative;
+    }
+    & .modal-content {
+        color: $heading-color;
+        border: 0;
+        border-radius: 0;
+        outline: 0;
+        max-height: calc(80vh - 60px);
+        max-width: calc(100vw - 60px);
+    }
+    & .modal-body {
+        overflow: auto;
+        padding: 0;
+    }
+    & .btn-close {
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        color: $white;
+        border: 0;
+        padding: 0;
+        background: $heading-color;
+        border-radius: 50%;
+        transition: $transition-base;
+        z-index: 9;
+        box-shadow: none;
+        opacity: 1;
+
+        & i {
+            transition: $transition-base;
+            line-height: 1;
+        }
+
+        &:hover {
+            background: $brand-color;
+            color: $white;
+
+            & i {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+// Quick View Product Slide
+.quick-view-product-slide {
+    & .swiper-button-next {
+        right: 0;
+    }
+    & .swiper-button-prev {
+        left: 0;
+    }
+}
+
+// Quick View Product Content
+.quick-view-product-content {
+    padding: 5%;
+
+    & .product-single-content {
+        &__title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        &__price-stock {
+            margin-bottom: 15px;
+        }
+        &__price {
+            font-size: 26px;
+
+            & del {
+                font-size: 22px;
+            }
+        }
+        &__stock {
+        }
+        &__short-description {
+            margin-bottom: 30px;
+        }
+        &__countdown {
+            margin-bottom: 20px;
+
+            &--title {
+                font-size: 16px;
+            }
+
+            &--progress {
+            }
+            &--stock {
+            }
+        }
+        &__variable {
+            margin-bottom: 15px;
+        }
+        &__add-to-cart-wrapper {
+            margin-bottom: 40px;
+        }
+        &__quantity-add-to-cart {
+            margin-bottom: 10px;
+        }
+        &__quantity {
+            & input {
+                height: 56px;
+            }
+        }
+        &__add-to-cart {
+            font-size: 14px;
+            padding: 17px 40px;
+        }
+
+        &__meta {
+            margin-bottom: 30px;
+
+            &--item {
+                padding: 0;
+
+                & .label {
+                    font-size: 16px;
+                }
+                & .content {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

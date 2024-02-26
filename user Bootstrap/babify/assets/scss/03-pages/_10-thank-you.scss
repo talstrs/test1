@@ -1,0 +1,100 @@
+/*----------------------------------------*/
+/*  03.10 - Thank You CSS
+/*----------------------------------------*/
+
+// Thank You
+.thank-you {
+}
+
+// Thank You Notice
+.thank-you-notice {
+    text-align: center;
+    font-size: 22px;
+    color: #008000;
+    line-height: 1.8;
+    margin-bottom: 16px;
+
+    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+        font-size: 20px;
+    }
+}
+
+// Thank You Order Overview
+.thank-you-order-overview {
+    list-style-type: disc;
+    padding-left: 17px;
+
+    & li {
+        font-size: 18px;
+        font-weight: 400;
+        color: $body-color;
+        margin-top: 8px;
+        line-height: 1.8;
+
+        & strong {
+            font-weight: 500;
+        }
+    }
+}
+
+// Thank You Title
+.thank-you-title {
+    font-size: 30px;
+    font-weight: 400;
+    color: $heading-color;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+        font-size: 24px;
+    }
+}
+
+// Thank You Order Details
+.thank-you-order-details {
+    margin-top: 40px;
+
+    & .table {
+        margin-bottom: 0;
+
+        tr {
+            th,
+            td {
+                font-size: 18px;
+                font-weight: 400;
+                color: $body-color;
+                padding: 12px 10px;
+                vertical-align: top;
+                border-bottom: 1px solid $border-color;
+
+                @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                    font-size: 16px;
+                }
+
+                & strong {
+                    font-weight: 400;
+                }
+
+                & small {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// Thank You Customer Details
+.thank-you-customer-details {
+    margin-top: 40px;
+
+    & address {
+        font-size: 18px;
+        font-weight: 400;
+        color: $body-color;
+        line-height: 1.8;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+}

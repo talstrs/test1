@@ -1,0 +1,68 @@
+/*----------------------------------------*/
+/*  02.01 - Header CSS
+/*----------------------------------------*/
+
+// Header
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+// Header Padding
+.header-padding {
+    padding: 25px 0;
+
+    @media #{$tablet-device, $large-mobile} {
+        padding: 20px 0;
+    }
+}
+
+@import "./header/header-top";
+@import "./header/header-middle";
+@import "./header/header-main";
+@import "./header/search";
+@import "./header/offcanvas-menu";
+@import "./header/mobile-menu";
+@import "./header/mobile-meta";
+@import "./header/slidedown-menu";
+
+.is-sticky {
+    position: fixed;
+    box-shadow: 0 5px 16px rgba($black, 0.1);
+    width: 100%;
+    background-color: $white;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    animation: stickyDown 0.8s ease-out;
+
+    & .header {
+        &__top {
+            display: none !important;
+        }
+        &__middle {
+            display: none !important;
+
+            @media #{$tablet-device, $large-mobile} {
+                display: block !important;
+            }
+        }
+    }
+
+    & .header-mid-logo {
+        @media #{$tablet-device, $large-mobile} {
+            padding: 0;
+        }
+    }
+
+    & .header-padding {
+        padding: 0;
+
+        @media #{$tablet-device, $large-mobile} {
+            padding: 10px 0;
+        }
+    }
+}

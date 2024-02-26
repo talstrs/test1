@@ -1,0 +1,147 @@
+/*----------------------------------------*/
+/*  02.15 - Breadcrumb CSS
+/*----------------------------------------*/
+
+// Breadcrumb Section
+.breadcrumb-section {
+    padding: 90px 0;
+
+    @media #{$laptop-device, $desktop-device,} {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @media #{$tablet-device, $large-mobile} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+// Breadcrumb Wrapper
+.breadcrumb-wrapper {
+    &__title {
+        font-size: 54px;
+        font-family: $headings-font-family;
+        font-weight: 500;
+        line-height: 1;
+        color: $heading-color;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 36px;
+        }
+        @media #{$tablet-device} {
+            font-size: 34px;
+        }
+        @media #{$large-mobile} {
+            font-size: 28px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 12px;
+
+        & li {
+            position: relative;
+
+            &:not(:last-child) {
+                &::after {
+                    content: ">";
+                    font-size: 20px;
+                    line-height: 1;
+                    color: #886e6e;
+                    margin: 0 10px;
+
+                    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            & span,
+            & a {
+                font-size: 20px;
+                line-height: 1;
+                color: #886e6e;
+                transition: $transition-base;
+
+                @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                    font-size: 16px;
+                }
+            }
+
+            & a {
+                &:hover {
+                    color: $brand-color;
+                }
+            }
+        }
+    }
+
+    &.breadcrumb-white {
+        & .breadcrumb-wrapper {
+            &__title {
+                color: $white;
+            }
+            &__items {
+                & li {
+                    &:not(:last-child) {
+                        &::after {
+                            color: $white;
+                        }
+                    }
+
+                    & span,
+                    & a {
+                        color: $white;
+                    }
+                    & a {
+                        &:hover {
+                            color: $brand-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Single Breadcrumbs
+.single-breadcrumbs {
+    padding: 30px 0;
+}
+
+// Single Breadcrumbs List
+.single-breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    & li {
+        position: relative;
+
+        &:not(:last-child) {
+            &::after {
+                content: "/";
+                font-size: 14px;
+                line-height: 1;
+                color: $body-color;
+                margin: 0 5px;
+            }
+        }
+
+        & span,
+        & a {
+            font-size: 14px;
+            line-height: 1;
+            color: $body-color;
+            transition: $transition-base;
+
+            &:hover {
+                color: $brand-color;
+            }
+        }
+        & span {
+            color: $heading-color;
+        }
+    }
+}

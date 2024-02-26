@@ -1,0 +1,166 @@
+/*--------------------------------
+  Home Page 02 Style 
+--------------------------------*/
+
+// Home 2 Slider Style
+.home-2-slider-style {
+    position: relative;
+    height: 1080px;
+
+    @media #{$laptop-device} {
+        height: 820px;
+    }
+    @media #{$desktop-device} {
+        height: 720px;
+    }
+    @media #{$tablet-device} {
+        height: 650px;
+    }
+    @media #{$large-mobile} {
+        height: auto;
+        padding: 100px 0;
+    }
+}
+
+// Home 5 Slider Content Style 1
+.home-2-slider-content-style-1 {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    padding-top: 150px;
+
+    @media #{$desktop-device} {
+        max-width: 520px;
+    }
+    @media #{$tablet-device} {
+        max-width: 480px;
+        padding-top: 80px;
+    }
+    @media #{$large-mobile} {
+        max-width: 380px;
+        padding-top: 50px;
+    }
+
+    @media #{$large-mobile} {
+        text-align: center;
+    }
+
+    &__sub-title {
+        color: $white;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.4em;
+        margin-bottom: 20px;
+
+        @media #{$large-mobile} {
+            font-size: 15px;
+            letter-spacing: 0.2em;
+        }
+    }
+    &__title {
+        color: #d8b871;
+        font-size: 86px;
+        font-family: $headings-font-family-02;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 30px;
+
+        @media #{$desktop-device, $tablet-device} {
+            font-size: 60px;
+        }
+        @media #{$large-mobile} {
+            font-size: 48px;
+        }
+    }
+    &__description {
+        color: #c7c1b4;
+        font-size: 32px;
+        font-weight: 400;
+        font-weight: normal;
+        line-height: 1.25;
+
+        @media #{$desktop-device} {
+            font-size: 28px;
+        }
+        @media #{$tablet-device} {
+            font-size: 24px;
+        }
+        @media #{$large-mobile} {
+            font-size: 20px;
+        }
+    }
+    &__btn {
+        font-size: 24px;
+        line-height: 1em;
+        color: $white;
+        position: relative;
+        transition: $transition-base;
+        margin: 130px 40px 0;
+
+        @media #{$desktop-device, $tablet-device} {
+            font-size: 20px;
+            margin-top: 100px;
+        }
+        @media #{$large-mobile} {
+            font-size: 18px;
+            margin-top: 80px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 5.8em;
+            height: 5.8em;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='141.04' height='145.999' viewBox='0 0 141.04 145.999'%3E%3Cpath d='M72.999 145.999a72.655 72.655 0 0 1-40.816-12.467 73.2 73.2 0 0 1-26.447-32.118 72.909 72.909 0 0 1 6.73-69.229A73.209 73.209 0 0 1 44.583 5.737a73.112 73.112 0 0 1 70.071 7.308 73.237 73.237 0 0 1 26.385 33.456h-1.076c-.2-.5-.409-1.017-.625-1.528a71.98 71.98 0 1 0-10.539 73.528h1.287a73.316 73.316 0 0 1-24.894 20.033 72.571 72.571 0 0 1-15.406 5.524 73.348 73.348 0 0 1-16.787 1.941Z' fill='%23fff' opacity='.3'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            right: 35%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            color: $brand-color;
+        }
+    }
+}
+
+// Slider Animation
+.home-2-slider-animation {
+    & .home-2-slider-content-style-1 {
+        opacity: 0;
+    }
+
+    &.swiper-slide-active {
+        & .home-2-slider-content-style-1 {
+            opacity: 1;
+
+            > * {
+                &:nth-child(1) {
+                    animation-name: ShortFadeInUp;
+                    animation-delay: 0.5s;
+                    animation-duration: 1.3s;
+                    animation-fill-mode: both;
+                }
+                &:nth-child(2) {
+                    animation-name: ShortFadeInUp;
+                    animation-delay: 1s;
+                    animation-duration: 1.3s;
+                    animation-fill-mode: both;
+                }
+                &:nth-child(3) {
+                    animation-name: ShortFadeInUp;
+                    animation-delay: 1.5s;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                }
+                &:nth-child(4) {
+                    animation-name: ShortFadeInUp;
+                    animation-delay: 2s;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+                }
+            }
+        }
+    }
+}

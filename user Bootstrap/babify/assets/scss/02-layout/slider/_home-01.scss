@@ -1,0 +1,175 @@
+/*--------------------------------
+  Home Page 01 Style 
+--------------------------------*/
+
+// Slider Style 01
+.home-1-slider-style-1 {
+    background-color: #e5ebe8;
+    border-radius: 20px;
+}
+
+// Slider content Style 01
+.home-1-slider-content-style-1 {
+    position: relative;
+    max-width: 580px;
+    width: 100%;
+    margin: 0 9%;
+
+    @media #{$laptop-device} {
+        max-width: 480px;
+    }
+    @media #{$desktop-device, $tablet-device} {
+        max-width: 420px;
+    }
+    @media #{$large-mobile} {
+        max-width: 270px;
+        margin: 0 6%;
+    }
+
+    &__sub-title {
+        line-height: 1;
+        font-size: 68px;
+        font-weight: 700;
+        font-family: $headings-font-family-02;
+        color: #e8a4a4;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device} {
+            font-size: 40px;
+        }
+        @media #{$large-mobile} {
+            font-size: 26px;
+        }
+    }
+    &__title {
+        color: #60d0d9;
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 1;
+        font-family: $headings-font-family-02;
+        margin-top: 15px;
+
+        @media #{$laptop-device} {
+            font-size: 70px;
+        }
+        @media #{$desktop-device, $tablet-device} {
+            font-size: 64px;
+        }
+        @media #{$large-mobile} {
+            font-size: 36px;
+            margin-top: 8px;
+        }
+    }
+    &__btns {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        & > * {
+            padding: 0 15px;
+            margin-top: 15px;
+        }
+
+        @media #{$large-mobile} {
+            margin-top: 10px;
+        }
+    }
+    &__btn {
+        background-color: $white;
+        color: $body-color;
+        font-weight: 400;
+        font-size: 16px;
+        font-family: $headings-font-family-02;
+        transition: $transition-base;
+        border: 1px solid $white;
+        padding: 12px 50px;
+        border-radius: 60px;
+        line-height: 1.25;
+
+        @media #{$large-mobile} {
+            font-size: 14px;
+            padding: 10px 27px;
+        }
+
+        &:hover {
+            border-color: #60d0d9;
+            background-color: #60d0d9;
+            color: $white;
+        }
+    }
+}
+
+// Slider Animation
+.home-1-slider-animation {
+    & .home-1-slider-content-style-1 {
+        opacity: 0;
+    }
+
+    &.swiper-slide-active {
+        & .home-1-slider-content-style-1 {
+            opacity: 1;
+
+            > * {
+                &:nth-child(1) {
+                    animation-name: ShortFadeInUp;
+                    animation-delay: 0.5s;
+                    animation-duration: 1.3s;
+                    animation-fill-mode: both;
+                }
+                &:nth-child(2) {
+                    animation-name: ShortFadeInUp;
+                    animation-delay: 1s;
+                    animation-duration: 1.3s;
+                    animation-fill-mode: both;
+                }
+                &:nth-child(3) {
+                    & > * {
+                        &:nth-child(1) {
+                            animation-name: ShortFadeInUp;
+                            animation-delay: 1.5s;
+                            animation-duration: 1s;
+                            animation-fill-mode: both;
+                        }
+                        &:nth-child(2) {
+                            animation-name: ShortFadeInUp;
+                            animation-delay: 2s;
+                            animation-duration: 1s;
+                            animation-fill-mode: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-1-slider-arrow {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media #{$desktop-device, $tablet-device} {
+        bottom: 40px;
+    }
+    @media #{$large-mobile} {
+        bottom: 20px;
+    }
+
+    & > * {
+        margin: 0 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @media #{$large-mobile} {
+            margin: 0 5px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+/*----------------------------------------*/
+/*  01. Helpers CSS
+/*----------------------------------------*/
+
+// Font Family
+$font-family-base: "giulia-plain", sans-serif;
+$headings-font-family: "giulia-plain", sans-serif;
+$headings-font-family-02: "giulia-plain", sans-serif;
+
+// Responsive Variables
+$extraBig-device: "only screen and (min-width: 1600px)";
+$laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
+$desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large-mobile: "only screen and (max-width: 767px)";
+$small-mobile: "only screen and (max-width: 575px)";
+$extra-small-mobile: "only screen and (max-width: 479px)";
+
+// Color
+$brand-color: #e8a4a4;
+// $brand-color: #d68d67;
+$brand-color-2: #347e56;
+$body-color: #494949;
+$heading-color: #363636;
+$border-color: #dedede;
+$three-color: #808080;
+//
+$white: #ffffff;
+$black: #000000;
+$grey: #bcbcbc;
+
+// Transition
+$transition-base: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);

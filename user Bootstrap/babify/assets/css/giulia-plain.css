@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "giulia-plain";
+    src: url("../fonts/giuliaplain300.eot");
+    src: url("../fonts/giuliaplain300.eot") format("embedded-opentype"),
+        url("../fonts/giuliaplain300.woff2") format("woff2"),
+        url("../fonts/giuliaplain300.woff") format("woff"),
+        url("../fonts/giuliaplain300.ttf") format("truetype"),
+        url("../fonts/giuliaplain300.svg#giuliaplain300") format("svg");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "giulia-plain";
+    src: url("../fonts/giuliaplain400.eot");
+    src: url("../fonts/giuliaplain400.eot") format("embedded-opentype"),
+        url("../fonts/giuliaplain400.woff2") format("woff2"),
+        url("../fonts/giuliaplain400.woff") format("woff"),
+        url("../fonts/giuliaplain400.ttf") format("truetype"),
+        url("../fonts/giuliaplain400.svg#giuliaplain400") format("svg");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "giuliaplain700";
+    src: url("../fonts/giuliaplain700.eot");
+    src: url("../fonts/giuliaplain700.eot") format("embedded-opentype"),
+        url("../fonts/giuliaplain700.woff2") format("woff2"),
+        url("../fonts/giuliaplain700.woff") format("woff"),
+        url("../fonts/giuliaplain700.ttf") format("truetype"),
+        url("../fonts/giuliaplain700.svg#giuliaplain700") format("svg");
+
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+}

@@ -1,0 +1,186 @@
+/*----------------------------------------*/
+/*  02.04 - Banner CSS
+/*----------------------------------------*/
+
+// Banner Section
+.banner-section {
+    margin-top: 40px;
+}
+
+// Banner Wrapper
+.banner-wrapper {
+    padding-top: 30px;
+
+    @media #{$tablet-device, $large-mobile} {
+        padding-top: 10px;
+    }
+}
+
+// Banner Item
+.banner-item {
+    position: relative;
+    // margin-top: 40px;
+
+    // @media #{$laptop-device, $desktop-device, $tablet-device} {
+    //     margin-top: 30px;
+    // }
+
+    & a {
+        display: block;
+    }
+
+    &__image {
+        overflow: hidden;
+        position: relative;
+
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: $transition-base;
+        }
+    }
+    &__content {
+        width: 60%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: 3%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        z-index: 3;
+        transition: $transition-base;
+
+        @media #{$large-mobile} {
+            width: 70%;
+        }
+
+        @media #{$small-mobile} {
+            padding: 0 15px;
+        }
+    }
+    &__title {
+        font-size: 46px;
+        font-weight: 700;
+        font-family: $headings-font-family-02;
+        color: $white;
+        line-height: 1.2;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 30px;
+        }
+    }
+    &__description {
+        color: $white;
+        font-size: 32px;
+        font-weight: 700;
+        font-family: $headings-font-family-02;
+        color: #60d0d9;
+        line-height: 1.2;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 24px;
+        }
+    }
+    &__btn {
+        padding: 12px 35px;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: $headings-font-family-02;
+        line-height: 20px;
+        color: $heading-color;
+        background-color: $white;
+        border: 1px solid $white;
+        border-radius: 60px;
+        transition: $transition-base;
+        margin-top: 15px;
+        display: inline-block;
+
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            padding: 8px 25px;
+            margin-top: 10px;
+        }
+
+        &:hover {
+            background-color: #e8a4a4;
+            border-color: #e8a4a4;
+            color: $white;
+        }
+    }
+
+    &:hover {
+        & .banner-item {
+            &__image {
+                & img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &.banner-1 {
+        & .banner-item {
+            &__content {
+                width: 100%;
+                bottom: 0;
+                top: auto;
+                transform: translateY(0);
+                margin: 0;
+                text-align: left;
+                padding: 0 40px 60px;
+
+                @media #{$desktop-device, $tablet-device} {
+                    padding: 0 25px 40px;
+                }
+                @media #{$large-mobile} {
+                    padding: 0 25px 40px;
+                }
+            }
+            &__title {
+                font-size: 56px;
+
+                @media #{$desktop-device, $tablet-device} {
+                    font-size: 42px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 36px;
+                }
+            }
+            &__description {
+                font-size: 46px;
+                color: $white;
+
+                @media #{$desktop-device, $tablet-device} {
+                    font-size: 36px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    &.banner-2 {
+        & .banner-item {
+            &__description {
+                color: #e8e87d;
+            }
+        }
+    }
+    &.banner-3 {
+        & .banner-item {
+            &__description {
+                color: #60d0d9;
+            }
+        }
+    }
+    &.banner-4 {
+        & .banner-item {
+            &__description {
+                color: #e8a4a4;
+            }
+        }
+    }
+}

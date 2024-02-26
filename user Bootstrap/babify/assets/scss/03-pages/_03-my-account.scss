@@ -1,0 +1,154 @@
+/*----------------------------------------*/
+/*  03.03 - My Account CSS
+/*----------------------------------------*/
+
+// My Account Tabs
+.my-account-tab {
+    & address,
+    & p {
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 1.8;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        & strong {
+            font-weight: 600;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        background: #f7f7f7;
+        margin-bottom: 2em;
+        text-align: center;
+
+        & .nav {
+            & li {
+                & .account-btn {
+                    background-color: transparent;
+                    border: 0;
+                    display: block;
+                    padding: 10px 30px;
+                    font-size: 18px;
+                    line-height: 1.8;
+                    transition: $transition-base;
+
+                    &.active,
+                    &:hover {
+                        background-color: $brand-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// My Account Dashboard
+.my-account-dashboard {
+}
+
+// My Account Order
+.my-account-orders {
+}
+
+// My Account Download
+.my-account-download {
+}
+
+// My Account Address
+.my-account-address {
+    &__content {
+        margin-top: 16px;
+    }
+    &__title {
+        font-size: 28px;
+        font-weight: 400;
+        color: $heading-color;
+        line-height: 1.2;
+        margin-bottom: 20px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 24px;
+        }
+    }
+    &__edit {
+        font-size: 18px;
+        color: $body-color;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+
+        &:hover {
+            color: $brand-color;
+        }
+    }
+}
+
+// My Account Details
+.my-account-detail {
+    &__legend {
+        font-size: 18px;
+        margin-bottom: 0.3em;
+        padding: 0.3em 0;
+        color: #333;
+        border-bottom: 1px solid $border-color;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+
+    & .btn {
+        font-size: 16px;
+        border-radius: 50px;
+    }
+}
+
+// My Account table
+.my-account-table {
+    & .table {
+        & thead,
+        & tbody {
+            & tr {
+                & th,
+                & td {
+                    border-bottom: 1px solid #dedede;
+                    padding: 10px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $body-color;
+                    vertical-align: middle;
+
+                    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                        font-size: 16px;
+                    }
+
+                    & .btn {
+                        font-size: 14px;
+                        font-weight: 400;
+                        background-color: $heading-color;
+                        letter-spacing: 0.3px;
+                        color: $white;
+                        padding: 18px 30px;
+                        line-height: 1;
+                        border: 0;
+
+                        &:hover {
+                            background-color: $brand-color;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

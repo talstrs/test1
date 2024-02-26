@@ -1,0 +1,206 @@
+/*----------------------------------------*/
+/*  03.08 - Compare CSS
+/*----------------------------------------*/
+
+// Compare Section
+.compare-section {
+}
+
+// Compare Table
+.compare-table {
+    & .table {
+        display: block;
+        margin: 0;
+        width: 100%;
+        overflow: auto;
+        padding: 0;
+        color: $heading-color;
+        border: 0;
+
+        &::-webkit-scrollbar {
+            height: 6px;
+            border-radius: 50px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #eee;
+            border-radius: 50px;
+        }
+
+        & tbody {
+            & tr {
+                & th {
+                    min-width: 268px;
+                    background-color: $white;
+                    vertical-align: middle;
+                    padding: 10px;
+                    position: -webkit-sticky;
+                    position: sticky;
+                    left: 0;
+                    color: $heading-color;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border-right: none;
+                    z-index: 1;
+                    border: 0;
+                    border-bottom: 1px solid #eee;
+                    line-height: 1.8;
+
+                    @media #{$laptop-device, $desktop-device} {
+                        font-size: 16px;
+                        min-width: 230px;
+                    }
+                    @media #{$tablet-device} {
+                        font-size: 16px;
+                        min-width: 150px;
+                    }
+                    @media #{$large-mobile} {
+                        font-size: 14px;
+                        min-width: 100px;
+                    }
+                }
+                & td {
+                    min-width: 300px;
+                    max-width: 100%;
+                    text-align: center;
+                    padding: 10px 20px;
+                    vertical-align: middle;
+                    font-weight: 400;
+                    border: 0;
+                    border-bottom: 1px solid #eee;
+                    font-size: 18px;
+                    line-height: 1.8;
+                    position: relative;
+
+                    @media #{$laptop-device, $desktop-device} {
+                        font-size: 16px;
+                        min-width: 260px;
+                    }
+                    @media #{$tablet-device} {
+                        font-size: 16px;
+                        min-width: 200px;
+                    }
+                    @media #{$large-mobile} {
+                        font-size: 14px;
+                        min-width: 200px;
+                    }
+
+                    &.td-placeholder {
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 60px;
+                            height: 8px;
+                            background-color: #eee;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    & td,
+                    & th {
+                        padding-top: 0;
+                    }
+                }
+
+                &.compare-tr-info {
+                    height: 250px;
+                    text-align: center;
+
+                    & .remove {
+                        width: 34px;
+                        height: 34px;
+                        line-height: 34px;
+                        text-align: center;
+                        border: 1px solid #ccc;
+                        border-radius: 50%;
+                        opacity: 0.8;
+                        font-size: 12px;
+                        transition: $transition-base;
+                        margin: 0 auto 10px;
+
+                        &:hover {
+                            background-color: $heading-color;
+                            border-color: $heading-color;
+                            color: $white;
+                        }
+                    }
+                    & .product-name {
+                        & > a {
+                            display: block;
+                        }
+                        & img {
+                            width: 120px;
+                            height: auto;
+                            object-fit: cover;
+                            margin: 0 auto;
+                        }
+                        & .name {
+                            margin: 15px 0 10px;
+                            font-weight: 400;
+                            font-size: 18px;
+
+                            @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    & .product-action {
+                        & .btn {
+                            font-weight: 500;
+                            padding: 8px 15px;
+                            line-height: 1;
+                            font-size: 12px;
+                            background-color: $heading-color;
+                            border-color: $heading-color;
+                            color: $white;
+
+                            &:hover {
+                                background-color: $brand-color;
+                                border-color: $brand-color;
+                                color: $white;
+                            }
+                        }
+                    }
+                    & .td-placeholder {
+                        background-image: url(../images/placeholder.png);
+                        background-repeat: no-repeat;
+                        background-position: center;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+                &.compare-tr-price {
+                    & span {
+                        & del {
+                            text-decoration: line-through;
+                        }
+                        & ins {
+                            text-decoration: none;
+                            color: $brand-color;
+                        }
+                    }
+                }
+                &.compare-tr-sku {
+                }
+                &.compare-tr-description {
+                }
+                &.compare-tr-stock {
+                    & .in-stock {
+                        color: #10b705;
+                    }
+                }
+                &.compare-tr-weight {
+                }
+                &.compare-tr-dimensions {
+                }
+            }
+        }
+    }
+}

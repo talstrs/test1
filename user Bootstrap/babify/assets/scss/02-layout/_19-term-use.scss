@@ -1,0 +1,71 @@
+/*----------------------------------------*/
+/*   02.19 - Term Of Use CSS
+/*----------------------------------------*/
+
+// Term Of Use Section
+.term-use-section {
+}
+
+// Term Of Use Wrapper
+.term-use-wrapper {
+    & > * {
+        margin-top: 80px;
+
+        @media #{$laptop-device, $desktop-device} {
+            margin-top: 70px;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            margin-top: 60px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+// Term Of Use Item
+.term-use-item {
+    &__title {
+        font-size: 42px;
+        font-weight: 400;
+        line-height: 1;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eaeaea;
+        color: $heading-color;
+
+        @media #{$laptop-device, $desktop-device} {
+            font-size: 32px;
+            padding-bottom: 15px;
+        }
+        @media #{$tablet-device} {
+            font-size: 28px;
+            padding-bottom: 15px;
+        }
+        @media #{$large-mobile} {
+            font-size: 28px;
+            padding-bottom: 15px;
+        }
+    }
+    &__list {
+        margin-top: 35px;
+
+        @media #{$laptop-device, $desktop-device} {
+            margin-top: 25px;
+        }
+
+        & li {
+            font-size: 22px;
+            line-height: 1.5;
+            margin-top: 16px;
+
+            @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                font-size: 18px;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}

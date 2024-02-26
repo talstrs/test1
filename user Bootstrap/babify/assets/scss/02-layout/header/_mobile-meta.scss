@@ -1,0 +1,50 @@
+/*----------------------------------------*/
+/*           Mobile Meta CSS
+/*----------------------------------------*/
+
+// Mobile Meta
+.mobile-meta {
+    background-color: $heading-color;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+// Mobile Meta Items
+.mobile-meta-items {
+    display: flex;
+    justify-content: space-around;
+
+    & li {
+        height: 50px;
+        line-height: 50px;
+
+        & button,
+        & a {
+            padding: 5px;
+            background: none;
+            border: 0;
+            color: $white;
+            position: relative;
+            line-height: 1;
+
+            & .badge {
+                background-color: $brand-color;
+                color: $white;
+                border-radius: 50%;
+                padding: 0;
+                width: 16px;
+                height: 16px;
+                line-height: 20px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 10px;
+                position: absolute;
+                left: 45%;
+                bottom: 67%;
+            }
+        }
+    }
+}

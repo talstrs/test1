@@ -1,0 +1,80 @@
+/*----------------------------------------*/
+/*             Search CSS
+/*----------------------------------------*/
+
+// Search Modal
+.search-modal {
+    background-color: rgba($black, 0.6);
+
+    & .modal-dialog {
+        max-width: 760px;
+        padding: 30px;
+    }
+    & .modal-content {
+        border-radius: 0;
+        background: none;
+        border: 0;
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        margin: 30px;
+        padding: 15px;
+        font-size: 24px;
+        border: 0;
+        background-color: $heading-color;
+        line-height: 1;
+        color: $white;
+        transition: $transition-base;
+
+        @media #{$large-mobile} {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        &:focus,
+        &:hover {
+            color: $white;
+            background-color: $brand-color;
+        }
+    }
+
+    &__form {
+        position: relative;
+        transform: translateY(-20px);
+        transition: transform 200ms ease-out;
+
+        & input {
+            width: 100%;
+            height: 52px;
+            background: none;
+            color: $white;
+            border: 0;
+            border-bottom: 1px solid rgba($white, 0.44);
+            font-size: 18px;
+
+            @include placeholder {
+                opacity: 1;
+                color: $white;
+            }
+        }
+
+        & button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            border: 0;
+            height: 52px;
+            font-size: 20px;
+            color: $white;
+            transition: $transition-base;
+
+            &:hover {
+                color: $brand-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+/*----------------------------------------*/
+/*  02.16 - Our Team CSS
+/*----------------------------------------*/
+
+// Our Team Wrapper
+.our-team-wrapper {
+    margin-top: -60px;
+
+    @media #{$laptop-device, $desktop-device, $tablet-device} {
+        margin-top: -50px;
+    }
+    @media #{$large-mobile} {
+        margin-top: -30px;
+    }
+}
+
+// Our Team Item
+.our-team-item {
+    margin-top: 60px;
+
+    @media #{$laptop-device, $desktop-device, $tablet-device} {
+        margin-top: 50px;
+    }
+    @media #{$large-mobile} {
+        margin-top: 30px;
+    }
+
+    &__image {
+        padding-bottom: 94%;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "";
+            opacity: 0;
+            background-color: $brand-color;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: $transition-base;
+            z-index: 1;
+        }
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__content {
+        margin-top: 30px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            margin-top: 25px;
+        }
+    }
+    &__name {
+        color: $heading-color;
+        font-size: 28px;
+        font-weight: 400;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 22px;
+        }
+    }
+    &__position {
+        color: $body-color;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 10px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 16px;
+        }
+    }
+    &__social {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+
+        & li {
+            margin-right: 20px;
+            line-height: 0.8;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            & a {
+                color: #d1d1d1;
+                font-size: 22px;
+                line-height: 0.8;
+                transition: $transition-base;
+
+                @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        & .our-team-item {
+            &__image {
+                &::before {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+}

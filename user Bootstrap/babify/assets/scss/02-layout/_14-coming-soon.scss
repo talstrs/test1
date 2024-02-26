@@ -1,0 +1,73 @@
+/*----------------------------------------*/
+/*  02.14 - Coming Soon CSS
+/*----------------------------------------*/
+
+// Coming Soon Section
+.coming-soon-section {
+}
+
+// Coming Soon Container
+.coming-soon-container {
+    max-width: 1250px;
+
+    @media #{$laptop-device, $desktop-device} {
+        padding: 0 80px;
+    }
+}
+
+// Coming Soon Wrapper
+.coming-soon-wrapper {
+}
+
+// Coming Soon Image
+.coming-soon-image {
+    width: 93%;
+
+    @media #{$large-mobile} {
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+// Coming Soon Content
+.coming-soon-content {
+    & > * {
+        margin-top: 35px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            margin-top: 25px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        color: $heading-color;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    &__btn {
+        background-color: $heading-color;
+        border-color: $heading-color;
+        color: $white;
+        padding: 14px 45px 13px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            padding: 13px 30px 12px;
+        }
+
+        &:hover {
+            background-color: $brand-color;
+            border-color: $brand-color;
+            color: $white;
+        }
+    }
+}

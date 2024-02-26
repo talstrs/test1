@@ -1,0 +1,182 @@
+/*----------------------------------------*/
+/*  02.11 - Testimonial CSS
+/*----------------------------------------*/
+
+// Testimonial Section
+.testimonial-section {
+}
+
+// Testimonial Active
+.testimonial-container {
+    max-width: 1280px;
+
+    @media #{$laptop-device, $desktop-device} {
+        max-width: 80%;
+    }
+    @media #{$tablet-device} {
+        max-width: 95%;
+    }
+}
+
+// Testimonial Active
+.testimonial-active {
+}
+
+// Testimonial Item
+.testimonial-wrapper {
+    margin-top: 60px;
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @media #{$laptop-device, $desktop-device, $tablet-device,} {
+        max-width: 700px;
+        margin-top: 40px;
+    }
+    @media #{$large-mobile} {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    & .swiper-button-next,
+    & .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 30px;
+        color: $heading-color;
+        transition: $transition-base;
+
+        &::after {
+            display: none;
+        }
+
+        @media #{$tablet-device} {
+            display: none;
+        }
+        @media #{$large-mobile} {
+            bottom: auto;
+            top: 88%;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        &:hover {
+            color: $brand-color;
+        }
+    }
+
+    & .swiper-button-next {
+        right: -15%;
+
+        @media #{$laptop-device, $desktop-device} {
+            right: -10%;
+        }
+        @media #{$large-mobile} {
+            right: 36%;
+        }
+    }
+    & .swiper-button-prev {
+        left: -15%;
+
+        @media #{$laptop-device, $desktop-device} {
+            left: -10%;
+        }
+        @media #{$large-mobile} {
+            left: 36%;
+        }
+    }
+}
+
+// Testimonial Item
+.testimonial-item {
+    &__rating {
+        margin-bottom: 10px;
+
+        & span {
+            overflow: hidden;
+            position: relative;
+            height: 1em;
+            line-height: 1;
+            font-size: 14px;
+            color: #b3bdbc;
+            display: inline-block;
+            vertical-align: middle;
+            letter-spacing: 0.2em;
+
+            &::before {
+                content: "\ea5e \ea5e \ea5e \ea5e \ea5e";
+                display: inline-block;
+                font: normal normal normal 1em/1 LaStudioIcons;
+                speak: none;
+                text-transform: none;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+
+        & .star-rating {
+            & > span {
+                overflow: hidden;
+                float: left;
+                top: 0;
+                left: 0;
+                height: 100%;
+                position: absolute;
+                color: #f5a623;
+            }
+        }
+    }
+    &__title {
+        color: $body-color;
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: center;
+
+        @media #{$laptop-device, $desktop-device,$tablet-device, $large-mobile} {
+            font-size: 18px;
+        }
+    }
+    &__description {
+        color: $heading-color;
+        font-family: $headings-font-family-02;
+        font-size: 36px;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 1.5em;
+        width: 100%;
+        margin: 10px 0 30px;
+        text-align: center;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device} {
+            font-size: 28px;
+        }
+        @media #{$large-mobile} {
+            font-size: 23px;
+        }
+    }
+    &__author {
+    }
+    &__image {
+        width: 55px;
+        height: 55px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &__name {
+        color: $body-color;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 400;
+        margin-top: 10px;
+        text-align: center;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 18px;
+        }
+    }
+}

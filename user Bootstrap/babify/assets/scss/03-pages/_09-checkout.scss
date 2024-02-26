@@ -1,0 +1,323 @@
+/*----------------------------------------*/
+/*  03.09 - Checkout CSS
+/*----------------------------------------*/
+
+// Checkout Info
+.checkout-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.checkout-col-1 {
+    width: 62%;
+
+    @media #{$tablet-device, $large-mobile} {
+        width: 100%;
+    }
+}
+.checkout-col-2 {
+    width: 35%;
+
+    @media #{$tablet-device, $large-mobile} {
+        width: 100%;
+    }
+}
+
+// Checkout Info
+.checkout-info {
+    &__title {
+        padding: 16px 30px 16px 60px;
+        position: relative;
+        background-color: #f9f9f9;
+        color: $heading-color;
+        line-height: 1.6;
+        font-size: 18px;
+        font-weight: 400;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 16px;
+            padding: 10px 40px 10px 50px;
+        }
+
+        & img,
+        & i {
+            position: absolute;
+            top: 22px;
+            left: 30px;
+
+            @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                left: 20px;
+            }
+        }
+        & button {
+            padding: 0;
+            border: 0;
+            background: none;
+            display: contents;
+            transition: $transition-base;
+
+            &:hover {
+                color: $brand-color;
+            }
+        }
+    }
+    &__body {
+        margin-top: 20px;
+
+        & p {
+            font-size: 18px;
+            color: $body-color;
+
+            @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                font-size: 16px;
+            }
+        }
+
+        & .single-form {
+            &__label {
+                font-size: 18px;
+
+                @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                    font-size: 16px;
+                }
+            }
+            &__input {
+                padding: 14px 20px;
+                max-width: 350px;
+            }
+        }
+    }
+}
+
+// Checkout Coupon Form
+.checkout-coupon-form {
+    display: flex;
+    gap: 5px;
+
+    & .single-form {
+        &__btn {
+            font-size: 14px;
+            padding: 15px 30px;
+        }
+    }
+}
+
+// Checkout Log In Form
+.checkout-login-form {
+    & p {
+        margin-top: 20px;
+    }
+    & .login-register {
+        &__social {
+            margin-top: 5px;
+        }
+    }
+    & .single-form {
+        &__btn {
+            min-width: 180px;
+            font-size: 18px;
+
+            @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// Checkout Details
+.checkout-details {
+    margin-top: 50px;
+
+    &__billing {
+        margin-top: -25px;
+    }
+    &__title {
+        font-size: 32px;
+        font-weight: 400;
+        color: $heading-color;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            font-size: 24px;
+        }
+    }
+    &__account {
+    }
+
+    &__order-review {
+        border: 1px solid #9b9b9b;
+        padding: 15px 40px 0;
+        color: $heading-color;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            padding: 15px 30px 0;
+        }
+
+        & .table {
+            margin-bottom: 0;
+
+            & tfoot,
+            & thead {
+                tr {
+                    border-bottom: 1px solid $border-color;
+                    margin-bottom: 15px;
+                    margin-top: 10px;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                        font-size: 18px;
+                    }
+
+                    &.cart-subtotal {
+                        margin-top: 20px;
+                    }
+                    &.order-total {
+                        margin-top: 0;
+                        padding-bottom: 6px;
+                    }
+
+                    & td,
+                    & th {
+                        font-weight: 400;
+                        padding: 3px 0;
+                        border: 0;
+
+                        & strong {
+                            font-weight: 600;
+                        }
+
+                        &.product-name {
+                        }
+                        &.product-total {
+                        }
+                    }
+                }
+            }
+
+            & tbody {
+                & tr {
+                    display: flex;
+                    justify-content: space-between;
+
+                    & td {
+                        padding: 2.5px 0;
+                        font-size: 18px;
+                        font-weight: 400;
+                        border-bottom: 0;
+
+                        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                            font-size: 16px;
+                        }
+
+                        &:first-child {
+                            padding-right: 10px;
+                        }
+
+                        & strong {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .shipping-methods {
+            & li {
+                margin-top: 10px;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                & label {
+                    color: $body-color;
+                    font-weight: 400;
+
+                    & .price {
+                        color: $heading-color;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    &__payment-method {
+        padding: 10px 0;
+
+        & .accordion {
+        }
+        & .accordion-item {
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+        }
+        & .single-form {
+            margin-top: 0;
+        }
+    }
+
+    &__privacy-policy {
+        font-size: 14px;
+        color: $body-color;
+        padding-bottom: 25px;
+    }
+
+    &__btn {
+        margin-left: -40px;
+        margin-right: -40px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+
+        & .btn {
+            padding: 20px 30px;
+            border: 0;
+            line-height: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            width: 100%;
+            background-color: $heading-color;
+            color: $white;
+
+            &:hover {
+                background-color: $brand-color;
+                color: $white;
+            }
+        }
+    }
+
+    & .checkout-account,
+    & .checkout-shipping {
+        display: none;
+    }
+
+    & .single-form {
+        &__label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            color: $heading-color;
+
+            @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                font-size: 16px;
+            }
+        }
+        &__input {
+            & + .single-form__input {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    & .payment-method-body {
+        padding: 10px 0;
+        font-size: 14px;
+        color: $body-color;
+    }
+}

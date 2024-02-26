@@ -1,0 +1,33 @@
+/*----------------------------------------*/
+/*  02.03. - Slider CSS
+/*----------------------------------------*/
+
+// Slider Section
+.slider-section {
+    position: relative;
+}
+
+// Slider Item
+.slider-item {
+    height: 700px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media #{$laptop-device} {
+        height: 510px;
+    }
+    @media #{$desktop-device} {
+        height: 460px;
+    }
+    @media #{$tablet-device} {
+        height: 430px;
+    }
+    @media #{$large-mobile} {
+        height: auto;
+        padding: 60px 0;
+    }
+}
+
+@import "./slider/home-01";
+// @import "./slider/home-02";

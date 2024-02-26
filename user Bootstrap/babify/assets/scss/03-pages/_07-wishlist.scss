@@ -1,0 +1,201 @@
+/*----------------------------------------*/
+/*  03.07 - Wishlist CSS
+/*----------------------------------------*/
+
+// Wishlist Section
+.wishlist-section {
+}
+
+// Wishlist Table
+.wishlist-table {
+    & .table {
+        margin-bottom: 0;
+
+        & thead {
+            background: #f9f9f9;
+
+            @media #{$large-mobile} {
+                display: none;
+            }
+
+            & tr {
+                & th {
+                    font-weight: 400;
+                    padding: 15px 20px;
+                    color: $heading-color;
+                    border: 0;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    font-weight: 400;
+
+                    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        & tbody {
+            & tr {
+                &.wishlist-item {
+                    @media #{$large-mobile} {
+                        position: relative;
+                        display: block;
+                        padding-top: 10px;
+                        padding-bottom: 20px;
+                        padding-left: 110px;
+                        padding-right: 25px;
+                        border-bottom: 1px solid #eee;
+                        margin-bottom: 17px;
+                        overflow: hidden;
+                    }
+                }
+                & td {
+                    border: 0;
+                    border-bottom: 1px solid #eee;
+                    padding: 40px 20px;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    font-weight: 400;
+
+                    @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                        font-size: 16px;
+                    }
+
+                    @media #{$large-mobile} {
+                        padding: 0;
+                        width: auto;
+                        border: none;
+                        display: block;
+                        min-width: 0;
+                        font-size: 16px;
+
+                        &[data-title] {
+                            &::before {
+                                content: attr(data-title) ": ";
+                                float: left;
+                                font-size: 15px;
+                                color: $heading-color;
+                                padding-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .product-remove {
+        width: 30px;
+
+        @media #{$large-mobile} {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            z-index: 2;
+            width: auto;
+        }
+
+        & .remove {
+            font-size: 0;
+
+            &::before {
+                font-family: "LaStudioIcons";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: normal;
+                font-style: normal;
+                letter-spacing: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                content: "";
+                font-size: 14px;
+                line-height: 30px;
+                color: $body-color;
+            }
+        }
+    }
+    & .product-thumbnail {
+        width: 130px;
+        padding: 0 10px;
+
+        @media #{$large-mobile} {
+            position: absolute;
+            width: 90px !important;
+            display: inline-block;
+            top: 15px;
+            left: 0;
+            bottom: 15px;
+            overflow: hidden;
+        }
+
+        & a {
+            display: block;
+        }
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    & .product-name {
+        & a {
+            font-weight: 400;
+            color: $heading-color;
+            transition: $transition-base;
+
+            &:hover {
+                color: $brand-color;
+            }
+        }
+    }
+    & .product-price {
+        & span {
+            & del {
+                text-decoration: line-through;
+            }
+            & ins {
+                text-decoration: none;
+                color: $brand-color;
+            }
+        }
+    }
+    & .product-stock {
+        & .in-stock {
+            &::before {
+                color: #10b705;
+                content: "";
+                font-family: "LaStudioIcons";
+                display: block;
+                text-transform: none;
+
+                @media #{$large-mobile} {
+                    display: none;
+                }
+            }
+        }
+    }
+    & .product-action {
+    }
+
+    &__btn {
+        padding: 14px 22px;
+        font-size: 14px;
+        line-height: 1;
+        background-color: $heading-color;
+        border-color: $heading-color;
+        color: $white;
+
+        @media #{$large-mobile} {
+            font-size: 13px;
+            padding: 9px 18px;
+            margin-top: 5px;
+        }
+
+        &:hover {
+            background-color: $brand-color;
+            border-color: $brand-color;
+            color: $white;
+        }
+    }
+}

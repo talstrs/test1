@@ -1,0 +1,183 @@
+/*----------------------------------------*/
+/*           Slide Down Menu CSS
+/*----------------------------------------*/
+
+// Slide Down Menu
+.slidedown-menu {
+    position: fixed;
+    display: flex;
+    align-items: stretch;
+    top: 0;
+    width: 100%;
+    height: auto;
+    pointer-events: auto;
+    z-index: 995;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s cubic-bezier(0.6, 0.17, 0.45, 0.88);
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        overflow-y: auto;
+        background-color: #363636;
+        box-shadow: 1px 1px 5px rgba($black, 0.5);
+        left: 0;
+        top: 0;
+    }
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        font-size: 26px;
+        top: 30px;
+        right: 30px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 100;
+        color: $white;
+
+        & button {
+            padding: 0;
+            background: none;
+            border: 0;
+        }
+    }
+    &__content {
+        max-height: 100vh;
+        overflow: auto;
+        padding: 20px 0;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-button {
+            width: 10px;
+            height: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #cecece;
+            border: 0 none $white;
+            border-radius: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #c1c1c1;
+        }
+
+        &::-webkit-scrollbar-thumb:active {
+            background: #c1c1c1;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgba(122, 122, 122, 0.15);
+            border: 0 none $white;
+            border-radius: 8px;
+        }
+
+        &::-webkit-scrollbar-track:hover {
+            background: rgba(122, 122, 122, 0.2);
+        }
+
+        &::-webkit-scrollbar-track:active {
+            background: rgba(122, 122, 122, 0.2);
+        }
+
+        &::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+    }
+    &__menu {
+        min-height: 100vh;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// Slide Down Primary Menu
+.slidedown-primary-menu {
+    text-align: center;
+
+    & > li {
+        & > a {
+            font-size: 44px;
+            padding: 20px 0;
+            color: rgba($white, 0.38);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: $transition-base;
+            line-height: 1;
+
+            @media #{$laptop-device, $desktop-device, $tablet-device} {
+                font-size: 32px;
+                padding: 15px 0;
+            }
+            @media #{$large-mobile} {
+                font-size: 26px;
+                padding: 14px 0;
+            }
+
+            & i {
+                font-size: 10px;
+                margin-left: 6px;
+            }
+
+            &.active {
+                color: $white;
+            }
+        }
+
+        &:hover {
+            & > a {
+                color: $white;
+            }
+        }
+    }
+
+    & .sub-menu,
+    & .mega-menu {
+        & li {
+            & > a {
+                font-size: 18px;
+                padding: 5px 10px;
+                color: rgba($white, 0.38);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: $transition-base;
+                line-height: 2;
+
+                @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile} {
+                    font-size: 16px;
+                    line-height: 1.8;
+                }
+
+                & i {
+                    font-size: 10px;
+                    margin-left: 6px;
+                }
+            }
+            &:hover {
+                & > a {
+                    color: $white;
+                }
+            }
+        }
+
+        display: none;
+    }
+}
