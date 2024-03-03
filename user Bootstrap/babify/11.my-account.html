@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <!--수정, 타이틀-->
-    <title>Babify - pet world</title>
+    <title>Babify - Pet world</title>
 
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="Babify - Kids Store & Baby Shop Template" />
@@ -195,7 +194,6 @@
         </div>
         <!-- Header Main End -->
     </header>
-
     <!-- Header End -->
 
     <!-- Cart Sidebar Start -->
@@ -778,56 +776,121 @@
         <div class="breadcrumb-section">
             <div class="container-fluid custom-container">
                 <div class="breadcrumb-wrapper text-center">
-                    <!--수정, 로그인-->
-                    <h2 class="breadcrumb-wrapper__title">
-                        Register
-                    </h2>
+                    <h2 class="breadcrumb-wrapper__title">My Account</h2>
                     <ul class="breadcrumb-wrapper__items justify-content-center">
                         <li><a href="index.html">Home</a></li>
-                        <li><span>Register</span></li>
+                        <li><span>My Account</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- Breadcrumb End -->
 
-        <!-- Log In & Register Start -->
-        <div class="login-register-section section-padding-2">
+        <!-- My Account Start -->
+        <div class="my-account-section section-padding-2">
             <div class="container-fluid custom-container">
-                <!--수정, justify-content-center 추가(가운데 정렬)-->
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <!-- Log In & Register Box Start -->
-                        <div class="login-register">
-                            <h3 class="login-register__title">Register</h3>
+                <!-- My Account Tabs Start -->
+                <div class="my-account-tab">
+                    <!-- My Account Tabs Menu Start -->
+                    <div class="my-account-tab__menu">
+                        <ul class="nav justify-content-center">
+                            <li>
+                                <button class="account-btn active" data-bs-toggle="tab" data-bs-target="#dashboard" type="button">
+                                    Dashboard
+                                </button>
+                            </li>
+                            <li>
+                                <button class="account-btn" data-bs-toggle="tab" data-bs-target="#account-detail" type="button">
+                                    Account Detail
+                                </button>
+                            </li>
+                            <li>
+                                <button class="account-btn" data-bs-toggle="tab" data-bs-target="#orders" type="button">
+                                    Orders
+                                </button>
+                            </li>
+                            <li>
+                                <button class="account-btn" data-bs-toggle="tab" data-bs-target="#address" type="button">
+                                    Address
+                                </button>
+                            </li>
+                            
+                            <li>
+                                <a class="account-btn" href="login-register.html">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- My Account Tabs Menu End -->
 
-                            <form action="">
-                                <div class="login-register__form">
-                                    <!--수정, 회원가입 폼 라벨 추가-->
-                                    <!-- Single Form Start -->
-                                    <div class="single-form">
-                                        <label for="loginRegisterEmail" class="form-label">Email address *</label>
-                                        <input class="single-form__input" type="email" id="loginRegisterEmail" placeholder="abd@google.com" />
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="dashboard">
+                            <!-- My Account Dashboard Start -->
+                            <!--수정, 계정 정보-->
+                            <div class="my-account-dashboard">
+                                <p>
+                                    Hello <strong>diyetox631</strong> (not
+                                    <strong>diyetox631</strong>?
+                                    <a href="#">Log out</a>)
+                                </p>
+                                <p>
+                                    From your account dashboard you can view
+                                    your <a href="#">recent orders</a>,
+                                    manage your
+                                    <a href="#">shipping and billing addresses</a>, and
+                                    <a href="#">edit your password and account
+                                        details</a>.
+                                </p>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <!-- Single Form Start -->
+                                            <div class="single-form">
+                                                <label class="single-form__label">Name *</label>
+                                                <div>name</div>
+                                            </div>
+                                            <!-- Single Form Start -->
+                                        </div>
+                                        
                                     </div>
                                     <!-- Single Form Start -->
+                                    <div class="single-form">
+                                        <label class="single-form__label">Gender *</label>
+                                        <div>male</div>
+                                    </div>
+                                    <!-- Single Form Start -->
+
                                     <!-- Single Form Start -->
                                     <div class="single-form">
-                                        <label for="loginRegisterPassword" class="form-label">Password *</label>
-                                        <input class="single-form__input" type="password" id="loginRegisterPassword" />
+                                        <label class="single-form__label">Email address *</label>
+                                        <div>abc@google.com</div>
                                     </div>
                                     <div class="single-form">
-                                        <label for="loginRegisterPasswordCheck" class="form-label">Password check *</label>
-                                        <input class="single-form__input" type="password" id="loginRegisterPasswordCheck" />
+                                        <label class="single-form__label">Birth date *</label>
+                                        <div>19950519</div>
                                     </div>
-                                    <!--수정, 회원가입 폼 추가-->
-                                    <div class="single-form">
-                                        <label for="loginRegisterName" class="form-label">name *</label>
-                                        <input class="single-form__input" type="text" id="loginRegisterName" />
+                                    <!-- Single Form Start -->
+                                </form>
+                            </div>
+
+                            <!-- My Account Dashboard End -->
+                        </div>
+                        <div class="tab-pane fade" id="account-detail">
+                            <!-- My Account Account Detail Start -->
+                            <!-- 수정, 개인정보 수정-->
+                            <div class="my-account-detail">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <!-- Single Form Start -->
+                                            <div class="single-form">
+                                                <label class="single-form__label">name *</label>
+                                                <input class="single-form__input" type="text" />
+                                            </div>
+                                            <!-- Single Form Start -->
+                                        </div>
+                                        
                                     </div>
-                                    <div class="single-form">
-                                        <label for="loginRegisterBirthDate" class="form-label">birth date *</label>
-                                        <input class="single-form__input" type="text" id="loginRegisterBirthDate" placeholder="20000101" />
-                                    </div>
+                                    <!-- Single Form Start -->
                                     <div class="pt-4">
                                         <label for="loginRegisterGender" class="form-label">gender *</label>
                                     </div>
@@ -844,155 +907,202 @@
                                         <label class="form-check-label" for="inlineRadio1">etc</label>
                                     </div>
                                     <!-- Single Form Start -->
+
                                     <!-- Single Form Start -->
                                     <div class="single-form">
-                                        <p class="privacy-policy-text">
-                                            Your personal data will be used
-                                            to support your experience
-                                            throughout this website, to
-                                            manage access to your account,
-                                            and for other purposes described
-                                            in our
-                                            <a href="#">privacy policy</a>.
-                                        </p>
+                                        <label class="single-form__label">Email address *</label>
+                                        <input class="single-form__input" type="email" />
                                     </div>
                                     <!-- Single Form Start -->
 
+                                    <div class="single-form">
+                                        <label class="single-form__label">Birth date *</label>
+                                        <input class="single-form__input" type="text" />
+                                    </div>
+                                    <p class="my-account-detail__legend">
+                                        Password change
+                                    </p>
+
                                     <!-- Single Form Start -->
-                                    <!--수정, 회원가입 버튼 가로 길이 수정-->
-                                    <div class="single-form text-center">
-                                        <a class="single-form__btn btn "style="width: 610px;">
-                                            Register
-                                        </a>
+                                    <div class="single-form">
+                                        <label class="single-form__label">Current password (leave blank
+                                            to leave unchanged)</label>
+                                        <input class="single-form__input" type="password" />
                                     </div>
                                     <!-- Single Form Start -->
+                                    <!-- Single Form Start -->
+                                    <div class="single-form">
+                                        <label class="single-form__label">New password (leave blank to
+                                            leave unchanged)</label>
+                                        <input class="single-form__input" type="password" />
+                                    </div>
+                                    <!-- Single Form Start -->
+                                    <!-- Single Form Start -->
+                                    <div class="single-form">
+                                        <label class="single-form__label">Confirm new password</label>
+                                        <input class="single-form__input" type="password" />
+                                    </div>
+                                    <!-- Single Form Start -->
+                                    <!-- Single Form Start -->
+                                    <div class="single-form">
+                                        <button class="single-form__btn btn">
+                                            Save Change
+                                        </button>
+                                    </div>
+                                    <!-- Single Form Start -->
+                                </form>
+                            </div>
+                            <!-- My Account Account Detail End -->
+                        </div>
+                        <div class="tab-pane fade" id="orders">
+                            <!-- My Account Orders Start -->
+                            <div class="my-account-orders">
+                                <div class="my-account-table table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <span>Order</span>
+                                                </th>
+                                                <th>
+                                                    <span>Date</span>
+                                                </th>
+                                                <th>
+                                                    <span>Status</span>
+                                                </th>
+                                                <th>
+                                                    <span>Total</span>
+                                                </th>
+                                                <th>
+                                                    <span>Actions</span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#"> #6564 </a>
+                                                </td>
+                                                <td>
+                                                    <time>
+                                                        May 29, 2024
+                                                    </time>
+                                                </td>
+                                                <td>On hold</td>
+                                                <td>
+                                                    <span>$216.97</span>
+                                                    for 3 items
+                                                </td>
+                                                <td>
+                                                    <a class="btn" href="#">
+                                                        View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#"> #6565 </a>
+                                                </td>
+                                                <td>
+                                                    <time>
+                                                        Aug 29, 2024
+                                                    </time>
+                                                </td>
+                                                <td>On hold</td>
+                                                <td>
+                                                    <span>$216.97</span>
+                                                    for 3 items
+                                                </td>
+                                                <td>
+                                                    <a class="btn" href="#">
+                                                        View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="#"> #6566 </a>
+                                                </td>
+                                                <td>
+                                                    <time>
+                                                        May 29, 2024
+                                                    </time>
+                                                </td>
+                                                <td>On hold</td>
+                                                <td>
+                                                    <span>$216.97</span>
+                                                    for 3 items
+                                                </td>
+                                                <td>
+                                                    <a class="btn" href="#">
+                                                        View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                            </form>
-
-                            <!--수정, 간편 로그인 버튼 추가 및 row, col 삽입-->
-                            <ul class="login-register__social row">
-                                <li class="col">
-                                    <a class="social-facebook" href="#">
-                                        <span class="social-icon">
-                                                <img
-                                                    src="./assets/images/facebook.png"
-                                                    alt="Facebook"
-                                                />
-                                            </span>
-                                        <span class="social-text"
-                                                >Login with Facebook</span>
-                                    </a>
-                                </li>
-                                <li class="col">
-                                    <a class="social-google" href="#">
-                                        <span class="social-icon">
-                                                <img
-                                                    src="./assets/images/google.svg"
-                                                    alt="Facebook"
-                                                />
-                                            </span>
-                                        <span class="social-text"
-                                                >Login with Google</span>
-                                    </a>
-                                </li>
-                                <li class="col">
-                                    <a class="bg-success" href="#">
-                                        <span class="social-icon">
-                                                <img
-                                                    src="./assets/images/naver.png"
-                                                    alt="naver"
-                                                />
-                                            </span>
-                                        <span class="social-text"
-                                                >Login with naver</span>
-                                    </a>
-                                </li>
-                                <li class="col">
-                                    <a class="bg-warning" href="#">
-                                        <span class="social-icon">
-                                                <img
-                                                    src="./assets/images/kakao.png"
-                                                    alt="kakao"
-                                                />
-                                            </span>
-                                        <span class="social-text"
-                                                >Login with kakao</span>
-                                    </a>
-                                </li>
-                            </ul>
+                            </div>
+                            <!-- My Account Orders End -->
                         </div>
-                        <!-- Log In & Register Box End -->
+                        
+                        <div class="tab-pane fade" id="address">
+                            <!-- My Account Address Start -->
+                            <div class="my-account-address">
+                                <p>
+                                    The following addresses will be used on
+                                    the checkout page by default.
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="my-account-address__content">
+                                            <h3 class="thank-you-title">
+                                                Billing address
+                                            </h3>
+                                            <!--수정, 주문자 주소 부문(우편번호,도로명&지번,상세,기타,위도,경도) + 이름,연락처-->
+                                            <address>
+                                                <div>012345</div>
+                                                <div>road name&nstreet number</div>
+                                                <div>detail address</div>
+                                                <div>etc address</div>
+                                                <div>Lat</div>
+                                                <div>Lon</div>
+                                                <div>name</div>
+                                                <div>010-1234-5678</div>
+                                            </address>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="my-account-address__content">
+                                            <h3 class="thank-you-title">
+                                                Shipping address
+                                            </h3>
+                                            <!--수정, 주문자 주소 부문(우편번호,도로명&지번,상세,기타,위도,경도) + 이름,연락처-->
+                                            <address>
+                                                <div>012345</div>
+                                                <div>road name&nstreet number</div>
+                                                <div>detail address</div>
+                                                <div>etc address</div>
+                                                <div>Lat</div>
+                                                <div>Lon</div>
+                                                <div>name</div>
+                                                <div>010-1234-5678</div>
+                                            </address>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- My Account Address End -->
+                        </div>
+                        
                     </div>
                 </div>
+                <!-- My Account Tabs End -->
             </div>
         </div>
-        <!-- Log In & Register End -->
+        <!-- My Account End -->
 
-        <!-- Newsletter Start -->
-        <!-- Newsletter Start -->
-        <div class="newsletter-section">
-            <div class="newsletter-left" style="background-image: url(./assets/images/newsletter-bg-1.jpg)">
-                <!-- Newsletter Wrapper Start -->
-                <div class="newsletter-wrapper text-center">
-                    <h4 class="newsletter-wrapper__title">Follow us on</h4>
-                    <p>
-                        Proin volutpat vitae libero at tincidunt. Maecenas sapien
-                        lectus, vehicula vel euismod sed, vulputate
-                    </p>
-
-                    <div class="newsletter-social">
-                        <ul class="newsletter-social__list">
-                            <li>
-                                <a href="#" aria-label="facebook">
-                                    <i class="lastudioicon-b-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="twitter">
-                                    <i class="lastudioicon-b-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="instagram">
-                                    <i class="lastudioicon-b-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="vimeo">
-                                    <i class="lastudioicon-b-vimeo"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="envato">
-                                    <i class="lastudioicon-envato"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Newsletter Wrapper End -->
-            </div>
-            <div class="newsletter-right" style="background-image: url(./assets/images/newsletter-bg-2.jpg)">
-                <!-- Newsletter Wrapper Start -->
-                <div class="newsletter-wrapper text-center">
-                    <h4 class="newsletter-wrapper__title">10% off when you sign up</h4>
-                    <p>
-                        Proin volutpat vitae libero at tincidunt. Maecenas sapien
-                        lectus, vehicula vel euismod sed, vulputate
-                    </p>
-                    <form action="#">
-                        <div class="newsletter-form-style-1">
-                            <input type="text" placeholder="Enter your email address..." />
-                            <button>Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-                <!-- Newsletter Wrapper End -->
-            </div>
-        </div>
-        <!-- Newsletter End -->
-
-        <!-- Newsletter End -->
     </main>
 
     <!-- Footer Start -->
