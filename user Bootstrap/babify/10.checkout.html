@@ -889,19 +889,20 @@
                                         <label class="single-form__label">Etc address *</label>
                                         <input class="single-form__input" type="text" placeholder="4F 404" />
                                     </div>
+                                    <div class="single-form">
+                                        <label class="single-form__label">Phone *</label>
+                                        <input class="single-form__input" type="text" placeholder="010-1234-1234" />
+                                    </div>
+                                    
+                                    <!-- Single Form End -->
+                                    <!-- Single Form Start -->
+                                    <div class="single-form">
+                                        <label class="single-form__label">Email address *</label>
+                                        <input class="single-form__input" type="email" placeholder="abd@google.com"/>
+                                    </div>
                                 </div>
 
                                 <!-- Single Form Start -->
-                                <div class="single-form">
-                                    <label class="single-form__label">Phone *</label>
-                                    <input class="single-form__input" type="text" />
-                                </div>
-                                <!-- Single Form End -->
-                                <!-- Single Form Start -->
-                                <div class="single-form">
-                                    <label class="single-form__label">Email address *</label>
-                                    <input class="single-form__input" type="email" />
-                                </div>
                                 <!-- Single Form End -->
                             
                                 <!-- Checkout Details Billing End -->
@@ -977,17 +978,19 @@
                                                 <label class="single-form__label">Etc address *</label>
                                                 <input class="single-form__input" type="text" placeholder="4F 404" />
                                             </div>
+                                            <div class="single-form">
+                                                <label class="single-form__label">Phone *</label>
+                                                <input class="single-form__input" type="text" placeholder="010-1234-1234" />
+                                            </div>
+                                            
+                                            <!-- Single Form End -->
+                                            <!-- Single Form Start -->
+                                            <div class="single-form">
+                                                <label class="single-form__label">Email address *</label>
+                                                <input class="single-form__input" type="email" placeholder="abd@google.com"/>
+                                            </div>
                                         </div>
-                                        <div class="single-form">
-                                            <label class="single-form__label">Phone *</label>
-                                            <input class="single-form__input" type="text" />
-                                        </div>
-                                        <!-- Single Form End -->
-                                        <!-- Single Form Start -->
-                                        <div class="single-form">
-                                            <label class="single-form__label">Email address *</label>
-                                            <input class="single-form__input" type="email" />
-                                        </div>
+
                                     </div>
                                 </div>
                                 <!-- Checkout Details Shipping End -->
@@ -1113,106 +1116,65 @@
                                     <div class="checkout-details__payment-method">
                                         <div class="accordion" id="payment-method">
                                             <form action="#">
+                                                <!-- 수정, 카드 결제, 네이버페이, 카카오페이-->
+                                                <!-- 수정, 카드-->
                                                 <div class="accordion-item">
-                                                    <div class="single-form" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                                        <input type="radio" name="payment-method" id="bank-transfer" />
-                                                        <label for="bank-transfer" class="single-form__label radio-label">
+                                                    <div class="single-form collapsed mt-1" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                                        <input type="radio" name="payment-method" id="credit-card" />
+                                                        <label for="credit-card" class="single-form__label radio-label ">
                                                             <span></span>
-                                                            Direct bank
-                                                            transfer
+                                                            Credit card
                                                         </label>
                                                     </div>
-                                                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#payment-method">
+                                                    <div id="collapseTwo" class="accordion-collapse collapse mt-2" data-bs-parent="#payment-method">
                                                         <div class="payment-method-body">
-                                                            <p>
-                                                                Make your
-                                                                payment
-                                                                directly
-                                                                into our
-                                                                bank
-                                                                account.
-                                                                Please use
-                                                                your Order
-                                                                ID as the
-                                                                payment
-                                                                reference.
-                                                                Your order
-                                                                will not be
-                                                                shipped
-                                                                until the
-                                                                funds have
-                                                                cleared in
-                                                                our account.
-                                                            </p>
+                                                            <select class="form-select p-3" aria-label="Default select example">
+                                                                <option selected>Card Company Select</option>
+                                                                <option value="bank1">Card Company One</option>
+                                                                <option value="bank2">Card Company Two</option>
+                                                                <option value="bank3">Card Company Three</option>
+                                                            </select>
+
+                                                            <div class="single-form pt-3">
+                                                                <label class="single-form__label">Card No *</label>
+                                                                <input class="single-form__input" type="text" />
+                                                            </div>
+                                                            <div class="single-form pt-3">
+                                                                <label class="single-form__label">Cardholder's name *</label>
+                                                                <input class="single-form__input" type="text" />
+                                                            </div>
+                                                            <div class="single-form pt-3">
+                                                                <label class="single-form__label">MM/YY *</label>
+                                                                <input class="single-form__input" type="text" />
+                                                            </div>
+                                                            <div class="single-form pt-3">
+                                                                <label class="single-form__label">CVV / CVC *</label>
+                                                                <input class="single-form__input" type="text" />
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <!-- 수정, 직접 송금, 카드 결제 등-->
-                                                <div class="accordion-item">
-                                                    <div class="single-form collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                                        <input type="radio" name="payment-method" id="check-payment" />
-                                                        <label for="check-payment" class="single-form__label radio-label">
-                                                            <span></span>
-                                                            Check payments
-                                                        </label>
-                                                    </div>
-                                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#payment-method">
-                                                        <div class="payment-method-body">
-                                                            <p>
-                                                                Make your
-                                                                payment
-                                                                directly
-                                                                into our
-                                                                bank
-                                                                account.
-                                                                Please use
-                                                                your Order
-                                                                ID as the
-                                                                payment
-                                                                reference.
-                                                                Your order
-                                                                will not be
-                                                                shipped
-                                                                until the
-                                                                funds have
-                                                                cleared in
-                                                                our account.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
+                                                <!-- 수정, 카카오페이-->
+                                                <div class="accordion-item ">
                                                     <div class="single-form collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                                        <input type="radio" name="payment-method" id="cash-on-delivery" />
-                                                        <label for="cash-on-delivery" class="single-form__label radio-label">
+                                                        <input type="radio" name="payment-method" id="kakaopay" />
+                                                        <label for="kakaopay" class="single-form__label radio-label">
                                                             <span></span>
-                                                            Cash On Delivery
+                                                            Kakao Pay
                                                         </label>
                                                     </div>
-                                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#payment-method">
-                                                        <div class="payment-method-body">
-                                                            <p>
-                                                                Make your
-                                                                payment
-                                                                directly
-                                                                into our
-                                                                bank
-                                                                account.
-                                                                Please use
-                                                                your Order
-                                                                ID as the
-                                                                payment
-                                                                reference.
-                                                                Your order
-                                                                will not be
-                                                                shipped
-                                                                until the
-                                                                funds have
-                                                                cleared in
-                                                                our account.
-                                                            </p>
-                                                        </div>
+                                                    
+                                                </div>
+                                                <!-- 수정, 네이버페이-->
+                                                <div class="accordion-item ">
+                                                    <div class="single-form collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                                        <input type="radio" name="payment-method" id="naverpay" />
+                                                        <label for="naverpay" class="single-form__label radio-label">
+                                                            <span></span>
+                                                            Naver Pay
+                                                        </label>
                                                     </div>
+                                                    
                                                 </div>
                                             </form>
                                         </div>

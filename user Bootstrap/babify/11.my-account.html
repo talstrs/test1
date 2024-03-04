@@ -801,7 +801,7 @@
                             </li>
                             <li>
                                 <button class="account-btn" data-bs-toggle="tab" data-bs-target="#account-detail" type="button">
-                                    Account Detail
+                                    Account
                                 </button>
                             </li>
                             <li>
@@ -825,22 +825,70 @@
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="dashboard">
                             <!-- My Account Dashboard Start -->
-                            <!--수정, 계정 정보-->
+                            
                             <div class="my-account-dashboard">
                                 <p>
                                     Hello <strong>diyetox631</strong> (not
                                     <strong>diyetox631</strong>?
                                     <a href="#">Log out</a>)
                                 </p>
-                                <p>
-                                    From your account dashboard you can view
-                                    your <a href="#">recent orders</a>,
-                                    manage your
-                                    <a href="#">shipping and billing addresses</a>, and
-                                    <a href="#">edit your password and account
-                                        details</a>.
-                                </p>
+                                
+                                <div class="border border-opacity-50 rounded p-4 mt-4">
+                                    <form action="#">
+                                        <div class="row">
+                                            <!--수정, 대시보드-->
+                                            <div class="col-md-6">
+                                                <!-- Single Form Start -->
+                                                <div class="single-form">
+                                                    <label class="single-form__label">* Name: <strong>name</strong></label>
+                                                    
+                                                </div>
+                                                <!-- Single Form Start -->
+                                            </div>
+                                            <div class="single-form">
+                                                <label class="single-form__label">* Total Order Amount: <strong>$ 1,154.63</strong></label>
+                                            </div>
+                                            <div class="single-form">
+                                                <label class="single-form__label">* Membership Level: <strong>New</strong></label>
+                                            </div>
+                                            <!-- 수정, 쿠폰-->
+                                            <div class="accordion" id="payment-method">
+                                                <form action="#">
+                                                    <div class="">
+                                                        <div class="single-form" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                                            <input type="radio" name="payment-method" id="bank-transfer" />
+                                                            <label for="bank-transfer" class="single-form__label radio-label">
+                                                                <span></span>
+                                                                Coupon
+                                                            </label>
+                                                        </div>
+                                                        <div id="collapseOne" class="accordion-collapse collapse mt-3" data-bs-parent="#payment-method">
+                                                            <div class="payment-method-body">
+                                                                <p>
+                                                                    - Welcome Coupon
+                                                                </p>
+                                                                <p>
+                                                                    - Coupon A
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- Single Form Start -->
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!-- My Account Dashboard End -->
+                        </div>
+                        <div class="tab-pane fade" id="account-detail">
+                            <!-- My Account Account Detail Start -->
+                            
+                            <div class="my-account-detail">
                                 <form action="#">
+                                    <!--수정, 계정 정보-->
                                     <div class="row">
                                         <div class="col-md-6">
                                             <!-- Single Form Start -->
@@ -868,88 +916,13 @@
                                         <label class="single-form__label">Birth date *</label>
                                         <div>19950519</div>
                                     </div>
+                                    <div class="mt-4">
                                     <!-- Single Form Start -->
-                                </form>
-                            </div>
-
-                            <!-- My Account Dashboard End -->
-                        </div>
-                        <div class="tab-pane fade" id="account-detail">
-                            <!-- My Account Account Detail Start -->
-                            <!-- 수정, 개인정보 수정-->
-                            <div class="my-account-detail">
-                                <form action="#">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <!-- Single Form Start -->
-                                            <div class="single-form">
-                                                <label class="single-form__label">name *</label>
-                                                <input class="single-form__input" type="text" />
-                                            </div>
-                                            <!-- Single Form Start -->
-                                        </div>
-                                        
+                                    <!-- 수정, 나중에 수정 페이지로 설정 필요-->
+                                        <a class="btn btn-outline-secondary" href="#">
+                                            Edit
+                                        </a>
                                     </div>
-                                    <!-- Single Form Start -->
-                                    <div class="pt-4">
-                                        <label for="loginRegisterGender" class="form-label">gender *</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="loginRegisterGender1" value="gender1">
-                                        <label class="form-check-label" for="inlineRadio1">male</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="loginRegisterGender2" value="gender2">
-                                        <label class="form-check-label" for="inlineRadio1">female</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="loginRegisterGender3" value="gender3">
-                                        <label class="form-check-label" for="inlineRadio1">etc</label>
-                                    </div>
-                                    <!-- Single Form Start -->
-
-                                    <!-- Single Form Start -->
-                                    <div class="single-form">
-                                        <label class="single-form__label">Email address *</label>
-                                        <input class="single-form__input" type="email" />
-                                    </div>
-                                    <!-- Single Form Start -->
-
-                                    <div class="single-form">
-                                        <label class="single-form__label">Birth date *</label>
-                                        <input class="single-form__input" type="text" />
-                                    </div>
-                                    <p class="my-account-detail__legend">
-                                        Password change
-                                    </p>
-
-                                    <!-- Single Form Start -->
-                                    <div class="single-form">
-                                        <label class="single-form__label">Current password (leave blank
-                                            to leave unchanged)</label>
-                                        <input class="single-form__input" type="password" />
-                                    </div>
-                                    <!-- Single Form Start -->
-                                    <!-- Single Form Start -->
-                                    <div class="single-form">
-                                        <label class="single-form__label">New password (leave blank to
-                                            leave unchanged)</label>
-                                        <input class="single-form__input" type="password" />
-                                    </div>
-                                    <!-- Single Form Start -->
-                                    <!-- Single Form Start -->
-                                    <div class="single-form">
-                                        <label class="single-form__label">Confirm new password</label>
-                                        <input class="single-form__input" type="password" />
-                                    </div>
-                                    <!-- Single Form Start -->
-                                    <!-- Single Form Start -->
-                                    <div class="single-form">
-                                        <button class="single-form__btn btn">
-                                            Save Change
-                                        </button>
-                                    </div>
-                                    <!-- Single Form Start -->
                                 </form>
                             </div>
                             <!-- My Account Account Detail End -->
@@ -1048,49 +1021,125 @@
                         
                         <div class="tab-pane fade" id="address">
                             <!-- My Account Address Start -->
-                            <div class="my-account-address">
-                                <p>
-                                    The following addresses will be used on
-                                    the checkout page by default.
-                                </p>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="my-account-address__content">
-                                            <h3 class="thank-you-title">
-                                                Billing address
-                                            </h3>
-                                            <!--수정, 주문자 주소 부문(우편번호,도로명&지번,상세,기타,위도,경도) + 이름,연락처-->
-                                            <address>
-                                                <div>012345</div>
-                                                <div>road name&nstreet number</div>
-                                                <div>detail address</div>
-                                                <div>etc address</div>
-                                                <div>Lat</div>
-                                                <div>Lon</div>
-                                                <div>name</div>
-                                                <div>010-1234-5678</div>
-                                            </address>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="my-account-address__content">
-                                            <h3 class="thank-you-title">
-                                                Shipping address
-                                            </h3>
-                                            <!--수정, 주문자 주소 부문(우편번호,도로명&지번,상세,기타,위도,경도) + 이름,연락처-->
-                                            <address>
-                                                <div>012345</div>
-                                                <div>road name&nstreet number</div>
-                                                <div>detail address</div>
-                                                <div>etc address</div>
-                                                <div>Lat</div>
-                                                <div>Lon</div>
-                                                <div>name</div>
-                                                <div>010-1234-5678</div>
-                                            </address>
-                                        </div>
-                                    </div>
+                            <!-- 수정, 주소 테이블-->
+                            <div class="my-account-orders">
+                                <div class="my-account-table table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th>
+                                                    <span>Title</span>
+                                                </th>
+                                                <th>
+                                                    <span>Zipcode</span>
+                                                </th>
+                                                <th>
+                                                    <span>Address</span>
+                                                </th>
+                                                <th>
+                                                    <span>Detail Address</span>
+                                                </th>
+                                                <th>
+                                                    <span>Etc Address</span>
+                                                </th>
+                                                <th>
+                                                    <span>Name</span>
+                                                </th>
+                                                <th>
+                                                    <span>Phone Number</span>
+                                                </th>
+                                                <th>
+                                                    <span>Edit</span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Home
+                                                </td>
+                                                <td>
+                                                    012354
+                                                </td>
+                                                <td>road name&nstreet number</td>
+                                                <td>
+                                                    detail address
+                                                </td>
+                                                <td>
+                                                    etc address
+                                                </td>
+                                                <td>
+                                                    name
+                                                </td>
+                                                <td>
+                                                    010-1234-5678
+                                                </td>
+                                                <td>
+                                                    <a class="btn" href="#">
+                                                        Edit
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Company
+                                                </td>
+                                                <td>
+                                                    012354
+                                                </td>
+                                                <td>road name&nstreet number</td>
+                                                <td>
+                                                    detail address
+                                                </td>
+                                                <td>
+                                                    etc address
+                                                </td>
+                                                <td>
+                                                    name
+                                                </td>
+                                                <td>
+                                                    010-1234-5678
+                                                </td>
+                                                <td>
+                                                    <a class="btn" href="#">
+                                                        Edit
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    etc
+                                                </td>
+                                                <td>
+                                                    012354
+                                                </td>
+                                                <td>road name&nstreet number</td>
+                                                <td>
+                                                    detail address
+                                                </td>
+                                                <td>
+                                                    etc address
+                                                </td>
+                                                <td>
+                                                    name
+                                                </td>
+                                                <td>
+                                                    010-1234-5678
+                                                </td>
+                                                <td>
+                                                    <a class="btn" href="#">
+                                                        Edit
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <a class="btn btn-outline-secondary" href="#">
+                                        Add Address
+                                    </a>
                                 </div>
                             </div>
                             <!-- My Account Address End -->
@@ -1149,37 +1198,17 @@
                     </div>
                     <div class="col-lg-7">
                         <!-- Footer Link Start -->
-                        <!--수정, 푸터 이후 링크 수정 필요-->
                         <div class="footer-link">
-                            <div class="footer-link__wrapper">
-                                <h2 class="footer-title">Company links</h2>
-
-                                <ul class="footer-link__list">
-                                    <li><a href="about.html">Home</a></li>
-                                    <li><a href="shop-fullwidth.html">Category</a></li>
-                                    <li>
-                                        <a href="term-of-use.html">Best</a>
-                                    </li>
-                                    <li>
-                                        <a href="term-of-use.html">New</a>
-                                    </li>
-                                    <li>
-                                        <a href="term-of-use.html">Sale</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            
                             <div class="footer-link__wrapper">
                                 <h2 class="footer-title">Category</h2>
 
                                 <ul class="footer-link__list">
-                                    <li><a href="shop-fullwidth.html">Clothing</a></li>
-                                    <li><a href="shop-fullwidth.html">Toys</a></li>
-                                    <li><a href="shop-fullwidth.html">Feed</a></li>
+                                    <li><a href="shop-fullwidth.html">Man</a></li>
+                                    <li><a href="shop-fullwidth.html">Woman</a></li>
+                                    <li><a href="shop-fullwidth.html">Kids</a></li>
                                     <li>
                                         <a href="shop-fullwidth.html">Accessories</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-fullwidth.html">Learning</a>
                                     </li>
                                 </ul>
                             </div>
